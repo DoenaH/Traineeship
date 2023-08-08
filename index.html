@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Tag styling */
+        p {
+            color: blue;
+            font-size: 140%;
+        }
+
+        /* Id styling */
+        #paragraaf-1 {
+            color: red;
+            font-size: 130%;
+            background-color: blue;
+        }
+
+        .mijntable {
+            background-color: lightblue;
+        }
+
+    </style>
+        
+
+    <script>
+        // Javascript code 
+
+        let a = 6; // Number
+        let b = "text"; // Tekst
+        let c = true; // Boolian
+
+        console.log('De waarde van a is ' + a );
+
+        let getal1 = 2;
+        let getal2 = 6.5;
+        let getal3 = 5;
+        let getal4 = 3.12;
+
+        let getal5 = getal1 + getal2; // + - / *
+        let getal6 = getal1 / getal2
+
+        // getal1 = getal1 + 3;
+        getal1 += 3 // -= *= /=
+
+        // getal1 += 1
+        getal1++
+
+        // If statement
+        if (c) {
+            alert('c is waar');
+        } else {
+            alert('c is niet waar')
+        }
+
+        function telop() {
+            // Getallen optellen 
+
+            // Invoer velden uitlezen
+            let getal1Invoer = document.getElementById('getal1-invoer').value
+            let getal2Invoer = document.getElementById('getal2-invoer').value
+            
+            // Getallen optellen 
+            let optellenResultaat = parseInt(getal1Invoer) +  parseInt(getal2Invoer);
+
+            // Print uitkomst
+            alert(optellenResultaat);
+        }
+
+        function printItems(argument1, argument2) {
+            console.log('Argument 1 = ' + argument1)
+        }
+
+        printItems(12, "Test")
+
+    </script>
+</head>
+<body>
+    <h1>Mijn eerste pagina</h1>
+
+    <!-- Dit is commentaar -->
+    <p id="paragraaf-1">Dit is een paragraaf</p><p>Dit is een tweede paragraaf</p>
+
+    <span style="color: rgb(110, 241, 34)">Dit is span 1</span><span>Dit is span 2</span>
+    <br>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ul>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+    </ol>
+   
+
+    <table class="mijntable">
+        <tr>
+            <td>Cell 1</td>
+            <td>Cell 2</td>
+        </tr>
+        <tr>
+            <td>
+                Cell 1
+            </td>
+            <td>
+                Cell 2
+            </td>
+        </tr>
+
+    
+    </table>
+
+    <!-- invoer velden -->
+    <input type="number" id="getal1-invoer" value="1">
+    <input type="number" id="getal2-invoer" value="2">
+    <button onclick="telop()">Optellen</button>
+
+    <!-- High cohesion - low coupling-->
+
+    <img width="100" height="80" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGPtwTQ7koKuwHp7f7UNGMjI40qtP8pXnwgp5YMpOKTA&s">
+
+</body>
+</html>
